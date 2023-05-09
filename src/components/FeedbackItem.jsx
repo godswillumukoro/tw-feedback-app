@@ -9,7 +9,7 @@ function FeedbackItem({ item, handleDelete }) {
       <Card darkTheme={true}>
         <div className="num-display">{item.rating}</div>
         <button onClick={() => handleDelete(item.id)} className="close">
-          <FaTimes color='purple' />
+          <FaTimes color='#CC9A4F' />
         </button>
         <div className="tex-display">{item.comment}</div>
       </Card>

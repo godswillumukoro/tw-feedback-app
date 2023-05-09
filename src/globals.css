@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Arvo&family=Open+Sans&display=swap');
 
 * {
   box-sizing: border-box;
@@ -7,10 +7,15 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #202142;
+font-family: 'Open Sans', sans-serif;
+  background-color: #282828;
   color: #fff;
   line-height: 1.6;
+}
+
+h1 {
+  font-family: 'Arvo', serif;
+
 }
 
 ul {
@@ -24,7 +29,7 @@ ul {
 }
 
 header {
-  height: 70px;
+  /* height: 70px; */
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -42,8 +47,8 @@ header {
 }
 
 .card.reverse {
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #fff;
+  background-color: #1A1918;
+  color: #F2D0A3;
 }
 
 .card h2 {
@@ -87,7 +92,7 @@ header {
 
 .rating li:hover,
 .num-display {
-  background: #ff6a95;
+  background: #CC9A4F;
   color: #fff;
 }
 
@@ -96,7 +101,7 @@ header {
 }
 
 [type='radio']:checked ~ label {
-  background: #ff6a95;
+  background: #CC9A4F;
   color: #fff;
 }
 
@@ -156,11 +161,11 @@ input:focus {
 }
 
 .btn-primary {
-  background-color: #202142;
+  background-color: #CC9A4F;
 }
 
 .btn-secondary {
-  background: #ff6a95;
+  background: #CC9A4F;
 }
 
 .btn:hover {
@@ -182,7 +187,7 @@ input:focus {
 .message {
   padding-top: 10px;
   text-align: center;
-  color: rebeccapurple;
+  color:#6a4c1f;
 }
 
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
@@ -200,7 +205,7 @@ input:focus {
 }
 
 .about-link a:hover {
-  color: #ff6a95;
+  color: #CC9A4F;
 }
 
 .about h1 {
@@ -227,4 +232,9 @@ input:focus {
   .input-group input {
     width: 80%;
   }
+}
+
+.text-center {
+  text-align: center;
+  color: yellowgreen;
 }

@@ -1,25 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Header({text, color, bgColor}) {
-
-    const headerStyles = {
-        backgroundColor: bgColor,
-        color:color
-    }
+function Header({ text, color, bgColor }) {
+  const headerStyles = {
+    backgroundColor: bgColor,
+    color: color,
+    textAlign: "center",
+    paddingBlock: "2.4rem",
+  };
 
   return (
     <header style={headerStyles}>
       <div className="container">
-        <h2>{text}</h2>
+        <h1>{text}</h1>
       </div>
     </header>
   );
 }
 Header.defaultProps = {
-  text: "Please give us some feedback",
-  bgColor: 'rgba(0,0,0,0.4',
-  color: '#ff6a95'
+  text: "We would love to hear your feedback!!",
+  bgColor: "#1A1918",
+  color: "#F2D0A3",
 };
 
 Header.propTypes = {
