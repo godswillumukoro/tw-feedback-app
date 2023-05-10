@@ -195,6 +195,10 @@ input:focus {
 .about-link {
   display: flex;
   justify-content: flex-end;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
@@ -208,12 +212,17 @@ input:focus {
   color: #CC9A4F;
 }
 
+
 .about h1 {
   margin-bottom: 20px;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #CC9A4F;
 }
 
 .about p {
   margin: 10px 0;
+
 }
 
 @media (max-width: 600px) {
