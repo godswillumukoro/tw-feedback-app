@@ -8,12 +8,12 @@ import Card from "./utils/Card";
 function FeedbackItem({ item }) {
   const { deleteFeedback } = useContext(FeedbackContext);
 
-  if(item.rating == 1) {
+  if(item.rating === 1) {
     item.rating = '😡'
-  } else if(item.rating == 5) {
+  } else if(item.rating === 5) {
     item.rating = '😐'
 
-  } else if(item.rating == 10) {
+  } else if(item.rating === 10) {
     item.rating = '😐'
   }
 
