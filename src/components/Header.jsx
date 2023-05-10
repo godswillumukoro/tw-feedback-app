@@ -18,7 +18,7 @@ function Header({ text, color, bgColor }) {
   );
 }
 Header.defaultProps = {
-  text: "We would love to hear your feedback!!",
+  text: "Thank you for dining with us today!",
   bgColor: "#1A1918",
   color: "#F2D0A3",
 };

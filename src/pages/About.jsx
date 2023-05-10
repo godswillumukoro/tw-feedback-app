@@ -7,8 +7,8 @@ function About() {
   return (
     <Card>
       <div className="about">
-        <h1>About This Project</h1>
-        <p>This is a React app to leave feedback for a product or service</p>
+        <h1>About This App</h1>
+        <p>We're always striving to improve our service at Twinwaters and provide our customers with the best possible experience. We would greatly appreciate your feedback on your dining experience today. Please let us know if there's anything we can do to make your next visit even better.</p>
         <p>Version: 1.0.0</p>
 
         <p>

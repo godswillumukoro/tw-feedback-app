@@ -1,21 +1,24 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import RatingSelect from "./RatingSelect";
 import Card from "./utils/Card";
 import Button from "./utils/Button";
+import FeedbackContext from "../context/FeedbackContext";
 
-function Form({handleAdd}) {
+function Form() {
   const [userReview, setUserReview] = useState("");
   const [userRating, setUserRating] = useState("");
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");
+
+  const { addFeedback } = useContext(FeedbackContext);
 
   const handleTextChange = (e) => {
     if (userReview === "") {
       setBtnDisabled(true);
       setMessage(null);
     } else if (userReview !== "" && userReview.trim().length <= 10) {
-      setMessage("Review must be at least 10 characters 😉");
+      setMessage("Please write at least 10 letters 🤗");
       setBtnDisabled(true);
     } else {
       setMessage(null);
@@ -25,21 +28,22 @@ function Form({handleAdd}) {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    if(userReview.trim().length>10) {
-        const newFeedback = {
-            rating: userRating,
-            comment: userReview,
-        }
-        handleAdd(newFeedback)
-        setUserReview('')
+    e.preventDefault();
+    if (userReview.trim().length > 10) {
+      const newFeedback = {
+        rating: userRating,
+        comment: userReview,
+      };
+      addFeedback(newFeedback);
+      setUserReview("");
     }
-  }
+  };
 
   return (
     <Card>
       <form onSubmit={handleSubmit}>
-        <h2>How would you rate your service with us?</h2>
+        <h2>We truly value your opinion and would love to hear your feedback on your experience here. Is there anything that you particularly enjoyed, or any areas where you think we could improve?</h2>
+        {/* <h2>We would greatly appreciate your feedback on your dining experience today. Please let us know if there's anything we can do to make your next visit even better.</h2> */}
         <RatingSelect select={(userRating) => setUserRating(userRating)} />
         <div className="input-group">
           <input
