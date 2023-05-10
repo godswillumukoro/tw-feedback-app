@@ -19,7 +19,7 @@ function RatingSelect({ select }) {
           checked={selected === 1}
           onChange={handleChange}
         />
-        <label htmlFor="1">😡</label>
+        <label htmlFor="1">☹️</label>
       </li>
       <li>
         <input
@@ -41,7 +41,7 @@ function RatingSelect({ select }) {
           checked={selected === 10}
           onChange={handleChange}
         />
-        <label htmlFor="10">😁</label>
+        <label htmlFor="10">🙂</label>
       </li>
     </ul>
   );
