@@ -2,11 +2,20 @@ import React from "react";
 import { useContext } from "react";
 import FeedbackContext from "../context/FeedbackContext";
 import { FaTimes } from "react-icons/fa";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import Card from "./utils/Card";
 
 function FeedbackItem({ item }) {
   const { deleteFeedback } = useContext(FeedbackContext);
+
+  if(item.rating == 1) {
+    item.rating = '😡'
+  } else if(item.rating == 5) {
+    item.rating = '😐'
+
+  } else if(item.rating == 10) {
+    item.rating = '😁'
+  }
 
   return (
     <div className="container">
@@ -29,9 +38,9 @@ function FeedbackItem({ item }) {
   // }
 }
 
-FeedbackItem.propTypes = {
-  num: PropTypes.number,
-  comment: PropTypes.string,
-};
+// FeedbackItem.propTypes = {
+//   num: PropTypes.string,
+//   comment: PropTypes.string,
+// };
 
 export default FeedbackItem;
