@@ -34,7 +34,6 @@ function Form() {
         rating: userRating,
         comment: userReview,
       };
-      console.log(userRating);
       addFeedback(newFeedback);
       setUserReview("");
     }

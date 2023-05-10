@@ -14,7 +14,7 @@ function FeedbackItem({ item }) {
     item.rating = '😐'
 
   } else if(item.rating == 10) {
-    item.rating = '😁'
+    item.rating = '😐'
   }
 
   return (
