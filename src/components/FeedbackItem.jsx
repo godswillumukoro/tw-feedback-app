@@ -9,12 +9,12 @@ function FeedbackItem({ item }) {
   const { deleteFeedback } = useContext(FeedbackContext);
 
   if(item.rating === 1) {
-    item.rating = '😡'
+    item.rating = '☹️'
   } else if(item.rating === 5) {
     item.rating = '😐'
 
   } else if(item.rating === 10) {
-    item.rating = '😐'
+    item.rating = '🙂'
   }
 
   return (
