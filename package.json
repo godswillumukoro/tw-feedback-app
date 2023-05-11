@@ -2,7 +2,7 @@
   "name": "tw-feedback-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://precious-frog-sock.cyclic.app/",
+  "proxy": "https://precious-frog-sock.cyclic.app",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

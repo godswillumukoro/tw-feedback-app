@@ -18,7 +18,9 @@ export const FeedbackProvider = ({ children }) => {
 
   // fetch feedback from backend
   const fetchFeedback = async () => {
-    const response = await fetch(`/feedback?_sort=id&order=desc`);
+    const response = await fetch(
+      `https://precious-frog-sock.cyclic.app/feedback?_sort=id&order=desc`
+    );
     const data = await response.json();
     setFeedback(data);
     setIsLoading(false);
@@ -26,23 +28,25 @@ export const FeedbackProvider = ({ children }) => {
 
   // add feedback to json server
   const addFeedback = async (newFeedback) => {
-    const response = await fetch("/feedback", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newFeedback),
-    });
+    const response = await fetch(
+      "https://precious-frog-sock.cyclic.app/feedback",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newFeedback),
+      }
+    );
     // newFeedback.id = uuidv4();
     const data = await response.json();
     setFeedback([data, ...feedback]);
-    
   };
 
   // delete feedback from json server
   const deleteFeedback = async (id) => {
     if (window.confirm("Sure you wanna delete?")) {
-      await fetch(`/feedback/${id}`, {
+      await fetch(`https://precious-frog-sock.cyclic.app/feedback/${id}`, {
         method: "DELETE",
       });
       setFeedback(feedback.filter((item) => item.id !== id));
@@ -57,13 +61,16 @@ export const FeedbackProvider = ({ children }) => {
 
   // update feedback from json server
   const updateFeedback = async (id, updatedItem) => {
-    const response = await fetch(`/feedback/${id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(updatedItem),
-    });
+    const response = await fetch(
+      `https://precious-frog-sock.cyclic.app/feedback/${id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedItem),
+      }
+    );
 
     const data = await response.json();
 
