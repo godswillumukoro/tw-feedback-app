@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import RatingSelect from "./RatingSelect";
 import Card from "./utils/Card";
 import Button from "./utils/Button";
@@ -11,7 +11,15 @@ function Form() {
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");
 
-  const { addFeedback } = useContext(FeedbackContext);
+  const { addFeedback, feedbackEditData } = useContext(FeedbackContext);
+
+  useEffect(() => {
+    if (feedbackEditData.editMode === true) {
+      setBtnDisabled(false);
+      setUserRating(feedbackEditData.item.rating);
+      setUserReview(feedbackEditData.item.comment);
+    }
+  }, [feedbackEditData]);
 
   const handleTextChange = (e) => {
     if (userReview === "") {
@@ -42,7 +50,11 @@ function Form() {
   return (
     <Card>
       <form onSubmit={handleSubmit}>
-        <h2>We truly value your opinion and would love to hear your feedback on your experience here. Is there anything that you particularly enjoyed, or any areas where you think we could improve?</h2>
+        <h2>
+          We truly value your opinion and would love to hear your feedback on
+          your experience here. Is there anything that you particularly enjoyed,
+          or any areas where you think we could improve?
+        </h2>
         {/* <h2>We would greatly appreciate your feedback on your dining experience today. Please let us know if there's anything we can do to make your next visit even better.</h2> */}
         <RatingSelect select={(userRating) => setUserRating(userRating)} />
         <div className="input-group">

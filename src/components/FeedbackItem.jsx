@@ -1,26 +1,29 @@
 import React from "react";
 import { useContext } from "react";
 import FeedbackContext from "../context/FeedbackContext";
-import { FaTimes } from "react-icons/fa";
+import { FaTimes, FaEdit } from "react-icons/fa";
 // import PropTypes from "prop-types";
 import Card from "./utils/Card";
 
 function FeedbackItem({ item }) {
-  const { deleteFeedback } = useContext(FeedbackContext);
+  const { deleteFeedback, editFeedback } = useContext(FeedbackContext);
+  let emoji;
 
-  if(item.rating === 1) {
-    item.rating = '😡'
-  } else if(item.rating === 5) {
-    item.rating = '😐'
-
-  } else if(item.rating === 10) {
-    item.rating = '😁'
+  if (item.rating === 1) {
+    emoji = "😡";
+  } else if (item.rating === 5) {
+    emoji = "😐";
+  } else if (item.rating === 10) {
+    emoji = "😁";
   }
 
   return (
     <div className="container">
       <Card darkTheme={true}>
-        <div className="num-display">{item.rating}</div>
+        <div className="num-display">{emoji}</div>
+        <button onClick={() => editFeedback(item)} className="edit">
+          <FaEdit />
+        </button>
         <button onClick={() => deleteFeedback(item.id)} className="close">
           <FaTimes color="#CC9A4F" />
         </button>
