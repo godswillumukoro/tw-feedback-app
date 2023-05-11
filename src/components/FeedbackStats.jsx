@@ -9,7 +9,7 @@ function FeedbackStats() {
   let reviews;
   let average =
     feedback.reduce((accumulator, current) => {
-      return accumulator + current.rating;
+      return accumulator + +current.rating;
     }, 0) / feedback.length;
 
   if (!feedback || feedback.length === 0) {
