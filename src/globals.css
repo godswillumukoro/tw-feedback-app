@@ -90,11 +90,16 @@ header {
   cursor: pointer;
 }
 
-.rating li:hover,
-.num-display {
+.rating li:hover {
   background: #CC9A4F;
   color: #fff;
 }
+
+.num-display {
+  background: #fff;
+  color: #CC9A4F;
+}
+
 
 [type='radio'] {
   opacity: 0;
@@ -200,6 +205,7 @@ input:focus {
   left: 0;
   bottom: 0;
   width: 100%;
+  font-size: 14px;
 }
 
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
