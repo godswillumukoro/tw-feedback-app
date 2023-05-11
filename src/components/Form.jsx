@@ -11,7 +11,8 @@ function Form() {
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");
 
-  const { addFeedback, feedbackEditData } = useContext(FeedbackContext);
+  const { addFeedback, feedbackEditData, updateFeedback } =
+    useContext(FeedbackContext);
 
   useEffect(() => {
     if (feedbackEditData.editMode === true) {
@@ -42,7 +43,11 @@ function Form() {
         rating: userRating,
         comment: userReview,
       };
-      addFeedback(newFeedback);
+      if (feedbackEditData.editMode === true) {
+        updateFeedback(feedbackEditData.item.id, newFeedback);
+      } else {
+        addFeedback(newFeedback);
+      }
       setUserReview("");
     }
   };

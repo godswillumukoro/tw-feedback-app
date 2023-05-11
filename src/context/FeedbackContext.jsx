@@ -45,6 +45,13 @@ export const FeedbackProvider = ({ children }) => {
       editMode: true,
     });
   };
+  const updateFeedback = (id, updatedItem) => {
+    setFeedback(
+      feedback.map((item) =>
+        item.id === id ? { ...item, ...updatedItem } : item
+      )
+    );
+  };
 
   // pass it to the provider inorder for it to be usuable
   return (
@@ -55,6 +62,7 @@ export const FeedbackProvider = ({ children }) => {
         deleteFeedback,
         editFeedback, //function
         feedbackEditData, //state that holds the item and the boolean
+        updateFeedback,
       }}
     >
       {children}
