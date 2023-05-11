@@ -1,12 +1,12 @@
 import React from "react";
 import { useContext } from "react";
 import FeedbackContext from "../context/FeedbackContext";
-import { FaTimes, FaEdit } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
 // import PropTypes from "prop-types";
 import Card from "./utils/Card";
 
 function FeedbackItem({ item }) {
-  const { deleteFeedback, editFeedback } = useContext(FeedbackContext);
+  const { deleteFeedback } = useContext(FeedbackContext);
   let emoji;
 
   if (item.rating === 1) {
