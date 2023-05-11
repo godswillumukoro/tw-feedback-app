@@ -21,9 +21,9 @@ function FeedbackItem({ item }) {
     <div className="container">
       <Card darkTheme={true}>
         <div className="num-display">{emoji}</div>
-        <button onClick={() => editFeedback(item)} className="edit">
+        {/* <button onClick={() => editFeedback(item)} className="edit">
           <FaEdit />
-        </button>
+        </button> */}
         <button onClick={() => deleteFeedback(item.id)} className="close">
           <FaTimes color="#CC9A4F" />
         </button>
