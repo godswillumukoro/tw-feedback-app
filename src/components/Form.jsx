@@ -49,33 +49,35 @@ function Form() {
         addFeedback(newFeedback);
       }
       setUserReview("");
+      setMessage("Thanks for your feedback!");
     }
   };
 
   return (
     <Card>
       <form onSubmit={handleSubmit}>
-        <h2>
-          We truly value your opinion and would love to hear your feedback on
-          your experience here. Is there anything that you particularly enjoyed,
-          or any areas where you think we could improve?
-        </h2>
-        {/* <h2>We would greatly appreciate your feedback on your dining experience today. Please let us know if there's anything we can do to make your next visit even better.</h2> */}
-        <RatingSelect select={(userRating) => setUserRating(userRating)} />
-        <div className="input-group">
-          <input
-            onChange={handleTextChange}
-            type="text"
-            name=""
-            id=""
-            placeholder="Write a review"
-            value={userReview}
-          />
-          <Button type="submit" isDisabled={btnDisabled}>
-            Send
-          </Button>
+        <div>
+          <h2>
+            We truly value your opinion and would love to hear your feedback on
+            your experience here. Is there anything that you particularly
+            enjoyed, or any areas where you think we could improve?
+          </h2>
+          <RatingSelect select={(userRating) => setUserRating(userRating)} />
+          <div className="input-group">
+            <input
+              onChange={handleTextChange}
+              type="text"
+              name=""
+              id=""
+              placeholder="Write a review"
+              value={userReview}
+            />
+            <Button type="submit" isDisabled={btnDisabled}>
+              Send
+            </Button>
+          </div>
+          {message && <div className="message">{message}</div>}
         </div>
-        {message && <div className="message">{message}</div>}
       </form>
     </Card>
   );

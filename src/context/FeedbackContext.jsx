@@ -36,6 +36,7 @@ export const FeedbackProvider = ({ children }) => {
     // newFeedback.id = uuidv4();
     const data = await response.json();
     setFeedback([data, ...feedback]);
+    
   };
 
   // delete feedback from json server

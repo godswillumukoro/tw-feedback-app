@@ -21,6 +21,14 @@ function App() {
               element={
                 <>
                   <Form />
+                </>
+              }
+            ></Route>
+            <Route
+              exact
+              path="/admin"
+              element={
+                <>
                   <FeedbackStats />
                   <FeedbackList />
                 </>
