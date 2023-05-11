@@ -6,7 +6,7 @@ function Footer() {
   return (
     <div className="about-link">
       <Link to="/about">
-        <FaQuestion size={14} />
+        Help<FaQuestion size={14} />
       </Link>
     </div>
   );
