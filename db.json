@@ -1,14 +1,49 @@
 {
   "feedback": [
-    {
+   {
+      "rating": 4,
+      "comment": "A delightful dining experience! The dishes were skillfully crafted and the ambiance was cozy. The only tiny improvement could be faster service during peak hours.",
+      "id": 1
+   },
+   {
       "rating": 5,
-      "comment": "The food was absolutely delicious - every bite was bursting with flavor and the presentation was impeccable. The service was also outstanding, with our waiter being attentive and knowledgeable about the menu",
+      "comment": "An unforgettable evening! The culinary journey was a masterpiece, and the staff's friendliness added warmth to the atmosphere. Truly exceptional.",
+      "id": 2
+   },
+   {
+      "rating": 3,
+      "comment": "Great food, though a bit noisy. The menu had diverse options and the flavors were on point. Some minor tweaks to noise control would make it perfect.",
+      "id": 3
+   },
+   {
+      "rating": 4,
+      "comment": "A remarkable find! The fusion of flavors in each dish was commendable. The service staff seemed a bit stretched, but their effort was evident.",
       "id": 4
-    },
-    {
-      "rating": 1,
-      "comment": "thats pretty much it my guy",
+   },
+   {
+      "rating": 5,
+      "comment": "Exquisite flavors that danced on the palate! Service was attentive and the staff's passion for the cuisine shone through. A gem of a place.",
       "id": 5
-    }
-  ]
+   },
+   {
+      "rating": 2,
+      "comment": "Disappointing visit. The food lacked the expected flair, and the service was slow. Hopeful for improvements in the future.",
+      "id": 6
+   },
+   {
+      "rating": 4,
+      "comment": "A satisfying meal with innovative dishes. The attentive staff created a welcoming environment. A suggestion would be to offer more vegetarian options.",
+      "id": 7
+   },
+   {
+      "rating": 5,
+      "comment": "Absolutely phenomenal! Every course was a masterpiece. The ambiance was elegant, and the service was impeccable.",
+      "id": 8
+   },
+   {
+      "rating": 3,
+      "comment": "Good food, but the service was a bit chaotic. Dishes were flavorful, but it felt like the staff was overwhelmed during peak hours.",
+      "id": 9
+   },
+
 }
